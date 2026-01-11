@@ -1,0 +1,261 @@
+/* ======================
+   Global Reset
+====================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Ubuntu, sans-serif;
+  color: #1f2937;
+}
+
+/* ======================
+   Page Layout
+====================== */
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #eff6ff,
+    #e0e7ff
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem;
+}
+
+/* Wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ======================
+   Main Card
+====================== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ======================
+   Header
+====================== */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ======================
+   Search Section
+====================== */
+.search-box {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Button */
+.search-box button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-box button:hover {
+  background: #1d4ed8;
+}
+
+.search-box button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ======================
+   Messages
+====================== */
+.error-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.success-box {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  color: #065f46;
+
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* ======================
+   SPF Records
+====================== */
+.record {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.record h3 {
+  margin-bottom: 1rem;
+}
+
+/* Raw SPF */
+.raw-record {
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+
+  font-family: monospace;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+/* ======================
+   Mechanisms
+====================== */
+.mechanism {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  background: #f3f4f6;
+  color: #374151;
+
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Include */
+.include {
+  background: #dbeafe;
+  color: #1e40af;
+  cursor: pointer;
+}
+
+.include:hover {
+  background: #bfdbfe;
+}
+
+/* Redirect */
+.redirect {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+/* Expanded Include */
+.include-expanded {
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+
+  padding: 0.75rem;
+  border-left: 3px solid #60a5fa;
+  background: #f8fafc;
+
+  font-family: monospace;
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+
+/* ======================
+   Empty State
+====================== */
+.empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 3rem 1rem;
+}
+
+/* ======================
+   Footer
+====================== */
+.footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 1.5rem;
+}
+
+/* ======================
+   Responsive
+====================== */
+@media (max-width: 640px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
